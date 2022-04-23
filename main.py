@@ -1,4 +1,6 @@
 # Classification Models
+import numpy as np
+from sklearn import tree, metrics
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.neighbors import KNeighborsClassifier
 
@@ -14,6 +16,7 @@ from sklearn.metrics import confusion_matrix
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
 import pandas as pd
+import matplotlib.pyplot as plt
 
 # Loading data from csv file
 data = pd.read_csv('mushrooms.csv', header=None)
@@ -24,19 +27,51 @@ num_rows = len(data.index)
 features = data.iloc[:, 1:]
 class_label = data.iloc[:, 0]
 
-# Split data into training and testing sets
-# x_train, x_test, y_train, y_test
+# Arrays to hold training sets
+test_train_1 = []
+test_train_2 = []
+test_train_3 = []
+test_train_4 = []
+test_train_5 = []
+test_train_6 = []
+test_train_7 = []
+test_train_8 = []
+test_train_9 = []
+test_train_10 = []
+test_train_20 = []
+test_train_30 = []
+test_train_40 = []
+test_train_50 = []
+test_train_60 = []
+test_train_70 = []
+test_train_80 = []
+test_train_90 = []
 
-train_test_arr = []
+# Fill each training set array with 10 sets of training data
+for x in range(0, 10):
+    test_train_1.append(train_test_split(features, class_label, test_size=0.99))
+    test_train_2.append(train_test_split(features, class_label, test_size=0.98))
+    test_train_3.append(train_test_split(features, class_label, test_size=0.97))
+    test_train_4.append(train_test_split(features, class_label, test_size=0.96))
+    test_train_5.append(train_test_split(features, class_label, test_size=0.95))
+    test_train_6.append(train_test_split(features, class_label, test_size=0.94))
+    test_train_7.append(train_test_split(features, class_label, test_size=0.93))
+    test_train_8.append(train_test_split(features, class_label, test_size=0.92))
+    test_train_9.append(train_test_split(features, class_label, test_size=0.91))
+    test_train_10.append(train_test_split(features, class_label, test_size=0.90))
+    test_train_20.append(train_test_split(features, class_label, test_size=0.80))
+    test_train_30.append(train_test_split(features, class_label, test_size=0.70))
+    test_train_40.append(train_test_split(features, class_label, test_size=0.60))
+    test_train_50.append(train_test_split(features, class_label, test_size=0.50))
+    test_train_60.append(train_test_split(features, class_label, test_size=0.40))
+    test_train_70.append(train_test_split(features, class_label, test_size=0.30))
+    test_train_80.append(train_test_split(features, class_label, test_size=0.20))
+    test_train_90.append(train_test_split(features, class_label, test_size=0.10))
 
-for x in range(1, 10):
-    train_test_arr.append(train_test_split(features, class_label, test_size=1-float(format(x * 0.001, '.3f'))))
-
-for x in range(1, 10):
-    train_test_arr.append(train_test_split(features, class_label, test_size=1 - float(format(x * 0.01, '.2f'))))
-
-for x in range(1, 10):
-    train_test_arr.append(train_test_split(features, class_label, test_size=1-float(format(x*0.1, '.1f'))))
+# Append all training set arrays to one array
+test_train_arr = [test_train_1, test_train_2, test_train_3, test_train_4, test_train_5, test_train_6, test_train_7,
+                  test_train_8, test_train_9, test_train_10, test_train_20, test_train_30, test_train_40, test_train_50,
+                  test_train_60, test_train_70, test_train_80, test_train_90]
 
 # Decision Tree
 #
@@ -265,35 +300,88 @@ SGDRegressor_model = SGDRegressor(
     power_t=0.25
 )
 
-# Looping over training/testing sets, train model, calculate prediction, print accuracy
+# Loop over each test_train_set
+for test_train_set in test_train_arr:
 
-for train_test in train_test_arr:
+    # Arrays to store classification accuracies for each test_train_set to calculate average accuracy
+    dt_acc = []
+    knn_acc = []
+    mlp_acc = []
 
-    # train_test = [x_train, x_test, y_train, y_test]
+    # Arrays to store regression model error for each test_train_set to calculate average error
+    lr_mae = []
+    lr_mse = []
+    lr_rmse = []
+    sgd_mae = []
+    sgd_mse = []
+    sgd_rmse = []
 
-    test_size = (len(train_test[0]) / num_rows) * 100
+    # Calculate size of current test_size as percent
+    test_size = round((len(test_train_set[0][0]) / num_rows) * 100)
 
-    print('\n=============================================================================')
-    print('Train: ', format(test_size, '.3f'), '%  Test: ', format(100-test_size, '.3f'), '%')
-    print('=============================================================================\n')
+    # Loop over each set in the test_train_set
+    for test_train in test_train_set:
 
-    DecisionTreeClassifier_model.fit(train_test[0], train_test[2])
-    KNN_model.fit(train_test[0], train_test[2])
-    MLPClassifier_model.fit(train_test[0], train_test[2])
-    LinearRegression_model.fit(train_test[0], train_test[2])
-    SGDRegressor_model.fit(train_test[0], train_test[2])
+        DecisionTreeClassifier_model.fit(test_train[0], test_train[2])
+        KNN_model.fit(test_train[0], test_train[2])
+        MLPClassifier_model.fit(test_train[0], test_train[2])
+        LinearRegression_model.fit(test_train[0], test_train[2])
+        SGDRegressor_model.fit(test_train[0], test_train[2])
 
-    # Create Predictions
-    DecisionTreeClassifier_prediction = DecisionTreeClassifier_model.predict(train_test[1])
-    KNN_prediction = KNN_model.predict(train_test[1])
-    MLPClassifier_prediction = MLPClassifier_model.predict(train_test[1])
-    LinearRegression_prediction = LinearRegression_model.predict(train_test[1])
-    SGDRegressor_prediction = SGDRegressor_model.predict(train_test[1])
+        # Create Predictions
+        DecisionTreeClassifier_prediction = DecisionTreeClassifier_model.predict(test_train[1])
+        KNN_prediction = KNN_model.predict(test_train[1])
+        MLPClassifier_prediction = MLPClassifier_model.predict(test_train[1])
 
-    # Print Accuracy
-    print("Decision Tree Accuracy:         ", accuracy_score(DecisionTreeClassifier_prediction, train_test[3]))
-    print("K-Nearest Neighbour Accuracy:   ", accuracy_score(KNN_prediction, train_test[3]))
-    print("Multilayer Perceptron Accuracy: ", accuracy_score(MLPClassifier_prediction, train_test[3]))
-    # print("Linear Regression Accuracy:     ", accuracy_score(LinearRegression_prediction, train_test[3]))
-    # print("SGD Regression Accuracy:        ", accuracy_score(SGDRegressor_prediction, train_test[3]))
+        # Since actual values are 0 or 1, round to the nearest integer (0 or 1)
+        LinearRegression_prediction = np.round(LinearRegression_model.predict(test_train[1]), 0)
+        SGDRegressor_prediction = np.round(SGDRegressor_model.predict(test_train[1]), 0)
+
+        # Print Classification Accuracy
+        # print("\nDecision Tree Accuracy:         ", accuracy_score(DecisionTreeClassifier_prediction, test_train[3]))
+        # print("Decision Tree Confusion Matrix: \n", confusion_matrix(DecisionTreeClassifier_prediction, test_train[3]))
+        # print("K-Nearest Neighbour Accuracy:   ", accuracy_score(KNN_prediction, test_train[3]))
+        # print("K-Nearest Neighbour Confusion Matrix: \n", confusion_matrix(KNN_prediction, test_train[3]))
+        # print("Multilayer Perceptron Accuracy: ", accuracy_score(MLPClassifier_prediction, test_train[3]))
+        # print("Multilayer Perceptron Confusion Matrix: \n", confusion_matrix(MLPClassifier_prediction, test_train[3]))
+
+        # Print Regression Error
+        # print('\nLinear Regression MAE:  ', metrics.mean_absolute_error(test_train[3], LinearRegression_prediction))
+        # print('Linear Regression MSE:  ', metrics.mean_squared_error(test_train[3], LinearRegression_prediction))
+        # print('Linear Regression RMSE: ', np.sqrt(metrics.mean_squared_error(test_train[3], LinearRegression_prediction)))
+        # print('\nSGD Regression MAE:  ', metrics.mean_absolute_error(test_train[3], SGDRegressor_prediction))
+        # print('SGD Regression MSE:  ', metrics.mean_squared_error(test_train[3], SGDRegressor_prediction))
+        # print('SGD Regression RMSE: ', np.sqrt(metrics.mean_squared_error(test_train[3], SGDRegressor_prediction)))
+
+        # Append classification accuracy to array to calculate average accuracy once the loop is done
+        dt_acc.append(accuracy_score(DecisionTreeClassifier_prediction, test_train[3]))
+        knn_acc.append(accuracy_score(KNN_prediction, test_train[3]))
+        mlp_acc.append(accuracy_score(MLPClassifier_prediction, test_train[3]))
+
+        # Append regression error to arrays to calculate averages once loop is done
+        lr_mae.append(metrics.mean_absolute_error(test_train[3], LinearRegression_prediction))
+        lr_mse.append(metrics.mean_squared_error(test_train[3], LinearRegression_prediction))
+        lr_rmse.append(np.sqrt(metrics.mean_squared_error(test_train[3], LinearRegression_prediction)))
+        sgd_mae.append(metrics.mean_absolute_error(test_train[3], SGDRegressor_prediction))
+        sgd_mse.append(metrics.mean_squared_error(test_train[3], SGDRegressor_prediction))
+        sgd_rmse.append(np.sqrt(metrics.mean_squared_error(test_train[3], SGDRegressor_prediction)))
+
+    # Print average accuracy for classification models
+    print("\n======================")
+    print("Train ", test_size, "%")
+    print("======================")
+
+    print("\nD-T Avg Accuracy:   ", round((sum(dt_acc)/len(dt_acc))*100, 2), "%")
+    print("KNN Avg Accuracy:   ", round((sum(knn_acc)/len(knn_acc))*100, 2), "%")
+    print("MLP Avg Accuracy:   ", round((sum(mlp_acc)/len(mlp_acc))*100, 2), "%")
+
+    # Print average error for regression models
+    print("\nLin. Reg. Avg MAE:  ", round((sum(lr_mae)/len(lr_mae))*100, 4), "%")
+    print("Lin. Reg. Avg MSE:  ", round((sum(lr_mse)/len(lr_mse))*100, 4), "%")
+    print("Lin. Reg. Avg RMSE: ", round((sum(lr_rmse)/len(lr_rmse))*100, 4), "%")
+
+    print("\nSDG Reg.  Avg MAE:  ", round((sum(sgd_mae)/len(sgd_mae))*100, 4), "%")
+    print("SDG Reg.  Avg MSE:  ", round((sum(sgd_mse)/len(sgd_mse))*100, 4), "%")
+    print("SDG Reg.  Avg RMSE: ", round((sum(sgd_rmse)/len(sgd_rmse))*100, 4), "%")
+
 
