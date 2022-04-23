@@ -1,0 +1,289 @@
+======================
+Train  1 %
+======================
+
+D-T Avg Accuracy:    97.79 %
+KNN Avg Accuracy:    89.31 %
+MLP Avg Accuracy:    93.72 %
+
+Lin. Reg. Avg MAE:   7.9 %
+Lin. Reg. Avg MSE:   10.0361 %
+Lin. Reg. Avg RMSE:  30.9574 %
+
+SDG Reg.  Avg MAE:   9.3174 %
+SDG Reg.  Avg MSE:   9.3174 %
+SDG Reg.  Avg RMSE:  30.1444 %
+
+======================
+Train  2 %
+======================
+
+D-T Avg Accuracy:    98.44 %
+KNN Avg Accuracy:    92.36 %
+MLP Avg Accuracy:    96.39 %
+
+Lin. Reg. Avg MAE:   5.9683 %
+Lin. Reg. Avg MSE:   6.6792 %
+Lin. Reg. Avg RMSE:  25.5627 %
+
+SDG Reg.  Avg MAE:   5.6154 %
+SDG Reg.  Avg MSE:   5.6154 %
+SDG Reg.  Avg RMSE:  23.4263 %
+
+======================
+Train  3 %
+======================
+
+D-T Avg Accuracy:    98.96 %
+KNN Avg Accuracy:    95.16 %
+MLP Avg Accuracy:    98.3 %
+
+Lin. Reg. Avg MAE:   4.2951 %
+Lin. Reg. Avg MSE:   4.3992 %
+Lin. Reg. Avg RMSE:  20.8811 %
+
+SDG Reg.  Avg MAE:   3.6518 %
+SDG Reg.  Avg MSE:   3.6518 %
+SDG Reg.  Avg RMSE:  19.0424 %
+
+======================
+Train  4 %
+======================
+
+D-T Avg Accuracy:    99.26 %
+KNN Avg Accuracy:    96.51 %
+MLP Avg Accuracy:    98.56 %
+
+Lin. Reg. Avg MAE:   4.6718 %
+Lin. Reg. Avg MSE:   4.8026 %
+Lin. Reg. Avg RMSE:  21.8053 %
+
+SDG Reg.  Avg MAE:   4.5026 %
+SDG Reg.  Avg MSE:   4.5026 %
+SDG Reg.  Avg RMSE:  21.1437 %
+
+======================
+Train  5 %
+======================
+
+D-T Avg Accuracy:    99.51 %
+KNN Avg Accuracy:    97.11 %
+MLP Avg Accuracy:    98.97 %
+
+Lin. Reg. Avg MAE:   4.4403 %
+Lin. Reg. Avg MSE:   4.4403 %
+Lin. Reg. Avg RMSE:  21.049 %
+
+SDG Reg.  Avg MAE:   4.5621 %
+SDG Reg.  Avg MSE:   4.5621 %
+SDG Reg.  Avg RMSE:  21.2358 %
+
+======================
+Train  6 %
+======================
+
+D-T Avg Accuracy:    99.73 %
+KNN Avg Accuracy:    97.48 %
+MLP Avg Accuracy:    99.34 %
+
+Lin. Reg. Avg MAE:   4.3329 %
+Lin. Reg. Avg MSE:   4.3329 %
+Lin. Reg. Avg RMSE:  20.7954 %
+
+SDG Reg.  Avg MAE:   4.5856 %
+SDG Reg.  Avg MSE:   4.5856 %
+SDG Reg.  Avg RMSE:  21.3304 %
+
+======================
+Train  7 %
+======================
+
+D-T Avg Accuracy:    99.74 %
+KNN Avg Accuracy:    97.59 %
+MLP Avg Accuracy:    99.47 %
+
+Lin. Reg. Avg MAE:   4.513 %
+Lin. Reg. Avg MSE:   4.513 %
+Lin. Reg. Avg RMSE:  21.1964 %
+
+SDG Reg.  Avg MAE:   4.3714 %
+SDG Reg.  Avg MSE:   4.3714 %
+SDG Reg.  Avg RMSE:  20.8326 %
+
+======================
+Train  8 %
+======================
+
+D-T Avg Accuracy:    99.78 %
+KNN Avg Accuracy:    97.92 %
+MLP Avg Accuracy:    99.6 %
+
+Lin. Reg. Avg MAE:   4.2127 %
+Lin. Reg. Avg MSE:   4.2127 %
+Lin. Reg. Avg RMSE:  20.5071 %
+
+SDG Reg.  Avg MAE:   4.1806 %
+SDG Reg.  Avg MSE:   4.1806 %
+SDG Reg.  Avg RMSE:  20.3776 %
+
+======================
+Train  9 %
+======================
+
+D-T Avg Accuracy:    99.66 %
+KNN Avg Accuracy:    98.22 %
+MLP Avg Accuracy:    99.54 %
+
+Lin. Reg. Avg MAE:   4.3108 %
+Lin. Reg. Avg MSE:   4.3108 %
+Lin. Reg. Avg RMSE:  20.7211 %
+
+SDG Reg.  Avg MAE:   4.2121 %
+SDG Reg.  Avg MSE:   4.2121 %
+SDG Reg.  Avg RMSE:  20.4329 %
+
+======================
+Train  10 %
+======================
+
+D-T Avg Accuracy:    99.66 %
+KNN Avg Accuracy:    98.49 %
+MLP Avg Accuracy:    99.69 %
+
+Lin. Reg. Avg MAE:   4.0755 %
+Lin. Reg. Avg MSE:   4.0782 %
+Lin. Reg. Avg RMSE:  20.1655 %
+
+SDG Reg.  Avg MAE:   3.9264 %
+SDG Reg.  Avg MSE:   3.9264 %
+SDG Reg.  Avg RMSE:  19.7633 %
+
+======================
+Train  20 %
+======================
+
+D-T Avg Accuracy:    99.94 %
+KNN Avg Accuracy:    99.44 %
+MLP Avg Accuracy:    99.88 %
+
+Lin. Reg. Avg MAE:   4.0908 %
+Lin. Reg. Avg MSE:   4.0908 %
+Lin. Reg. Avg RMSE:  20.1765 %
+
+SDG Reg.  Avg MAE:   4.1308 %
+SDG Reg.  Avg MSE:   4.1308 %
+SDG Reg.  Avg RMSE:  20.2508 %
+
+======================
+Train  30 %
+======================
+
+D-T Avg Accuracy:    99.97 %
+KNN Avg Accuracy:    99.7 %
+MLP Avg Accuracy:    99.99 %
+
+Lin. Reg. Avg MAE:   4.1164 %
+Lin. Reg. Avg MSE:   4.1164 %
+Lin. Reg. Avg RMSE:  20.276 %
+
+SDG Reg.  Avg MAE:   3.9845 %
+SDG Reg.  Avg MSE:   3.9845 %
+SDG Reg.  Avg RMSE:  19.926 %
+
+======================
+Train  40 %
+======================
+
+D-T Avg Accuracy:    99.99 %
+KNN Avg Accuracy:    99.85 %
+MLP Avg Accuracy:    99.97 %
+
+Lin. Reg. Avg MAE:   4.121 %
+Lin. Reg. Avg MSE:   4.121 %
+Lin. Reg. Avg RMSE:  20.2809 %
+
+SDG Reg.  Avg MAE:   3.961 %
+SDG Reg.  Avg MSE:   3.961 %
+SDG Reg.  Avg RMSE:  19.884 %
+
+======================
+Train  50 %
+======================
+
+D-T Avg Accuracy:    99.97 %
+KNN Avg Accuracy:    99.91 %
+MLP Avg Accuracy:    100.0 %
+
+Lin. Reg. Avg MAE:   4.2836 %
+Lin. Reg. Avg MSE:   4.2836 %
+Lin. Reg. Avg RMSE:  20.672 %
+
+SDG Reg.  Avg MAE:   4.2713 %
+SDG Reg.  Avg MSE:   4.2713 %
+SDG Reg.  Avg RMSE:  20.6207 %
+
+======================
+Train  60 %
+======================
+
+D-T Avg Accuracy:    100.0 %
+KNN Avg Accuracy:    99.99 %
+MLP Avg Accuracy:    100.0 %
+
+Lin. Reg. Avg MAE:   3.7815 %
+Lin. Reg. Avg MSE:   3.7815 %
+Lin. Reg. Avg RMSE:  19.4357 %
+
+SDG Reg.  Avg MAE:   3.8431 %
+SDG Reg.  Avg MSE:   3.8431 %
+SDG Reg.  Avg RMSE:  19.5671 %
+
+======================
+Train  70 %
+======================
+
+D-T Avg Accuracy:    100.0 %
+KNN Avg Accuracy:    99.99 %
+MLP Avg Accuracy:    100.0 %
+
+Lin. Reg. Avg MAE:   4.1222 %
+Lin. Reg. Avg MSE:   4.1222 %
+Lin. Reg. Avg RMSE:  20.2701 %
+
+SDG Reg.  Avg MAE:   4.0156 %
+SDG Reg.  Avg MSE:   4.0156 %
+SDG Reg.  Avg RMSE:  20.0281 %
+
+======================
+Train  80 %
+======================
+
+D-T Avg Accuracy:    100.0 %
+KNN Avg Accuracy:    99.99 %
+MLP Avg Accuracy:    100.0 %
+
+Lin. Reg. Avg MAE:   4.2523 %
+Lin. Reg. Avg MSE:   4.2523 %
+Lin. Reg. Avg RMSE:  20.5964 %
+
+SDG Reg.  Avg MAE:   4.1231 %
+SDG Reg.  Avg MSE:   4.1231 %
+SDG Reg.  Avg RMSE:  20.2642 %
+
+======================
+Train  90 %
+======================
+
+D-T Avg Accuracy:    100.0 %
+KNN Avg Accuracy:    100.0 %
+MLP Avg Accuracy:    100.0 %
+
+Lin. Reg. Avg MAE:   4.305 %
+Lin. Reg. Avg MSE:   4.305 %
+Lin. Reg. Avg RMSE:  20.6949 %
+
+SDG Reg.  Avg MAE:   4.0836 %
+SDG Reg.  Avg MSE:   4.0836 %
+SDG Reg.  Avg RMSE:  20.1518 %
+
+Process finished with exit code 0
