@@ -374,7 +374,7 @@ for test_train_set in test_train_arr:
             continue
 
         # Plot the first model.
-        display_DecisionTreeClassifier = RocCurveDisplay.from_estimator(DecisionTreeClassifier_model, test_train[1], test_train[3])
+        display_DecisionTreeClassifier = RocCurveDisplay.from_estimator(DecisionTreeClassifier_model, test_train[1], test_train[3], name='Decision Tree')
 
         # For some reason, if we don't first make a dummy plot with just the first model, this will appear twice on the
         # later plot. Comment the below line and run to see what I mean. I can't seem to find a fix for this, and the
@@ -383,8 +383,8 @@ for test_train_set in test_train_arr:
 
         # Plot the remaining models on top of the first model.
         ax = plt.gca()
-        display_KNN = RocCurveDisplay.from_estimator(KNN_model, test_train[1], test_train[3], ax=ax, alpha=0.8)
-        display_MLPClassifier = RocCurveDisplay.from_estimator(MLPClassifier_model, test_train[1], test_train[3], ax=ax, alpha=0.8)
+        display_KNN = RocCurveDisplay.from_estimator(KNN_model, test_train[1], test_train[3], ax=ax, alpha=0.8, name='K-Nearest Neighbour')
+        display_MLPClassifier = RocCurveDisplay.from_estimator(MLPClassifier_model, test_train[1], test_train[3], ax=ax, alpha=0.8, name='Multi-Layer Perceptron')
         display_DecisionTreeClassifier.plot(ax=ax, alpha=0.8)
 
         # Show the comparison of all models.
